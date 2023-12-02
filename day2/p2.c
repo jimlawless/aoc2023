@@ -16,11 +16,8 @@ int main(int argc,char **argv) {
     char buff[MAX_BUFF];
     int game_num;
     int count;
-    int possible;
     int sum;
-    #define MAX_RED (12)
-    #define MAX_GREEN (13)
-    #define MAX_BLUE (14)
+
     int red_min;
     int green_min;
     int blue_min;
@@ -30,7 +27,6 @@ int main(int argc,char **argv) {
         quit("Can't open input file",argv[1]);
     sum=0;
     for(;;) {
-        possible=1;
         red_min=green_min=blue_min=0;
         
         memset(buff,0,MAX_BUFF);        
@@ -75,7 +71,6 @@ int main(int argc,char **argv) {
                 quit("Unknown value",p);
         }
         sum+=(red_min*green_min*blue_min);
-            //printf("sum is %d\n",sum);
     }
     fclose(fin);
     printf("Power sum: %d\n",sum);
