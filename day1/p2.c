@@ -35,8 +35,6 @@ int main(int argc,char **argv) {
     codes[ENCODE('e','i')]=8;
     codes[ENCODE('n','i')]=9;
     
-    printf("%d %d\n",ENCODE('a','a'), ENCODE('z','z'));
-    
     fin=fopen(argv[1],"r");
     if(fin==NULL) {
         fprintf(stderr,"Can't open %s\n",argv[1]);
