@@ -19,8 +19,10 @@ int main(int argc,char **argv) {
     char buff[MAX_BUFF];
     char c1,c2,tmp;
     int lookup;
+    int i;
     
-    memset(codes,0x7f,16384);
+    for(i=0;i<=16384;i++)
+        codes[i]=-1;
     
     codes[ENCODE('z','e')]=0;
     codes[ENCODE('o','n')]=1;
@@ -33,10 +35,7 @@ int main(int argc,char **argv) {
     codes[ENCODE('e','i')]=8;
     codes[ENCODE('n','i')]=9;
     
-    
-    
     printf("%d %d\n",ENCODE('a','a'), ENCODE('z','z'));
-    
     
     fin=fopen(argv[1],"r");
     if(fin==NULL) {
@@ -65,7 +64,7 @@ int main(int argc,char **argv) {
             }
             else {
                 lookup=codes[ENCODE(p[0],p[1])];
-                if(lookup==0x7f)
+                if(lookup==-1)
                     continue;
                 if(strncmp(nums[lookup],p,strlen(nums[lookup]))==0) {
                     if(c1=='x') {
