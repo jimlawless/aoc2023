@@ -49,7 +49,7 @@ int main(int argc,char **argv) {
         if(strlen(buff)==0)
             continue;
         buff[strlen(buff)-1]=0;
-        printf("%s\n",buff);
+
         c1='x';
         c2='x';
         for(p=buff;*p;p++) {
@@ -65,19 +65,15 @@ int main(int argc,char **argv) {
                 if(lookup==-1)
                     continue;
                 if(strncmp(nums[lookup],p,strlen(nums[lookup]))==0) {
-                    if(c1=='x') {
+                    if(c1=='x') 
                         c1=('0'+lookup);
-                        continue;
-                    }
-                    else {
+                    else
                         c2=('0'+lookup);
-                    }
                 }
             }
         }
         if(c2=='x')
             c2=c1;
-        printf("number is %c%c\n",c1,c2);
         number=(c1-'0')*10+(c2-'0');
         sum+=number;
     }        
