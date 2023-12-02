@@ -44,5 +44,6 @@ int main(int argc,char **argv) {
         number=(c1-'0')*10+(c2-'0');
         sum+=number;
     }        
+    fclose(fin);
     printf("Sum is %d\n",sum);
 }
