@@ -5,7 +5,7 @@ This is my repo for solutions to this year's Advent of Code competition.
 
 I started out writing the solutions in C, so I guess that's what I'll continue to use.  We'll see how far I get before I become annoyed with the problems.
 
-(update 9 Dec 2023)
+## Update 9 Dec 2023
 
 Well, I finished the solutions through Day 6 and the first problems of Day 7 and Day 8.  But, I don't want to go too much further.
 
